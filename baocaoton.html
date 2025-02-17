@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Báo cáo tồn kho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Báo cáo tồn kho</h1>
+    </header>
+
+    <div class="container">
+        <div class="filter">
+            <h2>Bộ lọc</h2>
+            <form>
+                <label for="start_date">Từ ngày:</label>
+                <input type="date" id="start_date" name="start_date">
+                <label for="end_date">Đến ngày:</label>
+                <input type="date" id="end_date" name="end_date">
+                <button type="submit">Tìm kiếm</button>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                
+                <thead>
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>ĐVT</th>
+                        <th>SL Nhập</th>
+                        <th>SL Xuất</th>
+                        <th>Tồn kho</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SP001</td>
+                        <td>Sản phẩm A</td>
+                        <td>Cái</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            </div>
+    </div>
+
+    <footer>
+        <p>Liên hệ: xxxxxxxxxxx </p>
+    </footer>
+</body>
+</html>
