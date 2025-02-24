@@ -1,38 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: #1a1919;
+    color: #f3ebeb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-title {
+    margin: 0;
+    font-size: 16px;
+}
+.header-icons {
+    display: flex;
+    
+}
+.icon-x {
+    position: relative;
+    color: #ab3409; /* Màu của hình tròn */
+    font-size: 25px; /* Điều chỉnh kích thước */
+}
 
-    body {
-        background-color: #f8f9fa;
-    }
+.icon-x::after {
+    content: '×'; /* Ký tự dấu nhân */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa */
+    color: white; /* Màu của dấu '×' */
+    font-size: 20px; /* Kích thước nhỏ hơn hình tròn */
+    font-weight: bold;
+}
 
-    .login-box {
-        width: 420px  !important; 
-        padding: 30px;
-        border-radius: 12px; 
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-    }
+.header-icons a {
+    color: #589f9b;
+    margin-left: 10px;
 
-    h2 {
-        font-size: 24px; 
-        font-weight: bold;
-    }
-
-    .form-control {
-        height: 45px; /* Tăng chiều cao input */
-        font-size: 16px;
-    }
-
-    .btn {
-        height: 45px; /* Tăng chiều cao nút */
-        font-size: 16px;
-        border-radius: 8px; /* Bo góc nút */
-    }
-
-    .btn-primary {
-        background-color: #007bff;
-        border: none;
-    }
-
-    .btn-danger {
-        background-color: #dc3545;
-        border: none;
-    }
-
+}
+.title-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f2f2;
+    color: #060606;
+    box-shadow: 0 2px 5px rgba(158, 153, 153, 0.1);
+    width: 100%;
+}
+.title-box img {
+    margin-right: 10px;
+}
+.title-box h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.main {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar img {
+    width: 50px;
+    height: 50px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar ul li ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 20px;
+    display: none;
+}
+.sidebar ul li ul li {
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+.sidebar ul li ul li a {
+    display: block;
+    color: #000;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
