@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhà sách - Thay đổi quy định</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <span>QUẢN LÝ NHÀ SÁCH</span>
+            </div>
+            <ul>
+                <li>Sách</li>
+                <li>Khách Hàng</li>
+                <li>Báo cáo</li>
+                <li>Tùy chỉnh</li>
+                <li class="active">Thay đổi quy định</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <select>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="en">Tiếng Anh</option>
+                </select>
+            </div>
+            <div class="main">
+                <h2>Thay đổi quy định</h2>
+                <form action="process.php" method="post">
+                    <div class="rule">
+                        <p>Quy định</p>
+                        <label for="minImport">Số lượng nhập ít nhất</label>
+                        <input type="number" id="minImport" name="minImport">
+                        <label for="maxStockBeforeImport">Lượng tồn tối đa trước khi nhập</label>
+                        <input type="number" id="maxStockBeforeImport" name="maxStockBeforeImport">
+                    </div>
+                    <div class="rule">
+                        <p>Quy định</p>
+                        <label for="maxDebt">Tiền nợ tối đa</label>
+                        <input type="number" id="maxDebt" name="maxDebt">
+                        <label for="minStockAfterSell">Lượng tồn tối thiểu sau khi bán</label>
+                        <input type="number" id="minStockAfterSell" name="minStockAfterSell">
+                    </div>
+                    <div class="rule">
+                        <p>Quy định</p>
+                        <label for="limitPayment">Sử dụng quy định số tiền thu không vượt quá số tiền khách hàng đang nợ</label>
+                        <input type="checkbox" id="limitPayment" name="limitPayment" value="1">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" name="save">Thay đổi</button>
+                        <button type="submit" name="default">Mặc định</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
